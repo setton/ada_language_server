@@ -5,3 +5,8 @@ FROM gitpod/workspace-full
 # RUN brew install bastet
 #
 # More information: https://www.gitpod.io/docs/config-docker/
+# Install custom tools, runtime, etc.
+RUN sudo apt-get update \
+    && sudo apt-get install -y \
+        gnat \
+        gprbuild \
